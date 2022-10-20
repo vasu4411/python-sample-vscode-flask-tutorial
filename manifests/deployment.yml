@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vasupythonsamplevscodeflasktutorial 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vasupythonsamplevscodeflasktutorial
+  template:
+    metadata:
+      labels:
+        app: vasupythonsamplevscodeflasktutorial 
+    spec:
+      containers:
+        - name: vasupythonsamplevscodeflasktutorial 
+          image: wincontest.azurecr.io/vasupythonsamplevscodeflasktutorial
+          ports:
+          - containerPort: 5000

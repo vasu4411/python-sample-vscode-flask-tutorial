@@ -31,6 +31,10 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
+    - task: MicrosoftSecurityDevOps@1
+      inputs:
+        languages: 'python'
+        tools: 'bandit'
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:

@@ -33,7 +33,7 @@ stages:
     steps:
     - task: MicrosoftSecurityDevOps@1
       inputs:
-        categories: '*'
+        categories: 'secrets'
         languages: 'python'
         tools: 'bandit'
     - task: Docker@2
